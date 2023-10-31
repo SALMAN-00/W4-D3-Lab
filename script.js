@@ -1,4 +1,3 @@
-
 characters = [
   {
     name: "Luke Skywalker",
@@ -38,82 +37,79 @@ characters = [
 ];
 console.log(`
 _________________Find()_________________
-`)
+`);
 let firstBlue = characters.find(x => {
   return x.eye_color == "blue";
 });
 
 console.log(firstBlue.name);
-console.log(`______________________________`)
+console.log(`______________________________`);
 let firstMass = characters.find(x => {
-    return x.mass > 50;
-  });
-  console.log(firstMass.gender);
+  return x.mass > 50;
+});
+console.log(firstMass.gender);
 
-  console.log(`
+console.log(`
   _________________Filter()_________________
-  `)
+  `);
 
+let heightLess = characters.filter(x => x.height < 200);
 
-let heightLess = characters.filter((x => x.height< 200));
+console.log(heightLess);
+console.log(`______________________________`);
 
-console.log(heightLess)
-console.log(`______________________________`)
+let allMale = characters.filter(x => x.gender == "male");
 
-let allMale = characters.filter(x=> x.gender == "male")
-
-console.log(allMale)
-console.log(`______________________________`)
+console.log(allMale);
+console.log(`______________________________`);
 
 console.log(`
 _________________Map()_________________
-`)
+`);
 
-let allName = characters.map(x=> x.name)
-console.log(allName)
-console.log(`______________________________`)
-let allHeight = characters.map(x=> x.height)
-console.log(allHeight)
-console.log(`______________________________`)
-
-
+let allName = characters.map(x => x.name);
+console.log(allName);
+console.log(`______________________________`);
+let allHeight = characters.map(x => x.height);
+console.log(allHeight);
+console.log(`______________________________`);
 
 console.log(`
 _________________Sort()_________________
-`)
-let massLTH = characters.sort((x,y)=> x.mass - y.mass)
+`);
+let massLTH = characters.sort((x, y) => x.mass - y.mass);
 
-console.log(massLTH)
+console.log(massLTH);
 
-console.log(`______________________________`)
+console.log(`______________________________`);
 
-let heightHTL = characters.sort((x,y)=>   y.height- x.height)
+let heightHTL = characters.sort((x, y) => y.height - x.height);
 
-console.log(heightHTL)
+console.log(heightHTL);
 
-console.log(`______________________________`)
+console.log(`______________________________`);
 
 console.log(`
 _________________Evrey()_________________
-`)
+`);
 
-let everyMass = characters.every(x=> x.mass > 40)
-console.log(everyMass)
-console.log(`______________________________`)
+let everyMass = characters.every(x => x.mass > 40);
+console.log(everyMass);
+console.log(`______________________________`);
 
-let everyHeight = characters.every(x=> x.height < 200)
-console.log(everyHeight)
-console.log(`______________________________`)
+let everyHeight = characters.every(x => x.height < 200);
+console.log(everyHeight);
+console.log(`______________________________`);
 
 console.log(`
 _________________Some()_________________
-`)
-let isBlue = characters.some(x=> x.eye_color === "blue")
-console.log(isBlue)
-console.log(`______________________________`)
-let isTaller = characters.some(x=> x.height < 210)
-console.log(isTaller)
-console.log(`______________________________`)
+`);
+let isBlue = characters.some(x => x.eye_color === "blue");
+console.log(isBlue);
+console.log(`______________________________`);
+let isTaller = characters.some(x => x.height > 210);
+console.log(isTaller);
+console.log(`______________________________`);
 /*function blue(x){
     return x.eye_color == "blue"
 }
